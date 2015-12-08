@@ -1,0 +1,39 @@
+<div class="container">
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-text">
+                        <ul class="breadcrumb">
+                            <li ng-repeat="breadCrumb in breadCrumbs"><a >{{breadCrumb}}</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="col-md-12">
+        <div class="thumbnail">
+                <img class="img-responsive" src="{{product.largeImage}}" alt="" />
+                <div class="caption-full">
+                    <h4 class="pull-right">${{product.salePrice}}</h4>
+                    <h4 >{{product.name}}</h4>
+                    <p >{{product.shortDescription}}</p>
+                </div>
+                <div class="ratings">
+                        <p class="pull-right">{{product.numReviews}} reviews</p>
+                        <p>
+                            <img src="{{product.customerRatingImage}}" alt="" />
+                            {{product.customerRating}} stars
+                        </p>
+                    
+                        <p>
+                        to open this product on live site <a ng-click="openExternalURL()">click here</a>
+                        </p>
+                    </div>
+            </div>
+    </div>
+
+</div>
